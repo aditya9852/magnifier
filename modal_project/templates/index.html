@@ -1,0 +1,875 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Catalog - Modal Image Magnifier Demo</title>
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="title">Product Catalog</h1>
+        <p class="subtitle">Explore our selection of premium products</p>
+      </div>
+
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Premium Headphones"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Premium Headphones</h2>
+            <div class="product-card-price">$299.99</div>
+            <button class="view-details-btn" data-product="1">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Polaroid Camera"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Polaroid Camera</h2>
+            <div class="product-card-price">$149.99</div>
+            <button class="view-details-btn" data-product="2">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Running Shoes"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Running Shoes</h2>
+            <div class="product-card-price">$89.99</div>
+            <button class="view-details-btn" data-product="3">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1461141346587-763ab02bced9?q=80&w=1100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Smart Watch"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Smart Watch</h2>
+            <div class="product-card-price">$249.99</div>
+            <button class="view-details-btn" data-product="4">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Vintage Typewriter"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Vintage Typewriter</h2>
+            <div class="product-card-price">$199.99</div>
+            <button class="view-details-btn" data-product="5">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Laptop Computer"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Laptop Computer</h2>
+            <div class="product-card-price">$1299.99</div>
+            <button class="view-details-btn" data-product="6">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Basketball Shoes"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Basketball Shoes</h2>
+            <div class="product-card-price">$119.99</div>
+            <button class="view-details-btn" data-product="7">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Digital Camera"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Digital Camera</h2>
+            <div class="product-card-price">$699.99</div>
+            <button class="view-details-btn" data-product="8">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Mechanical Keyboard"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Mechanical Keyboard</h2>
+            <div class="product-card-price">$129.99</div>
+            <button class="view-details-btn" data-product="9">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1558537348-c0f8e733989d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fEJsdWV0b290aCUyMFNwZWFrZXJ8ZW58MHx8MHx8fDA%3D"
+              alt="Bluetooth Speaker"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Bluetooth Speaker</h2>
+            <div class="product-card-price">$79.99</div>
+            <button class="view-details-btn" data-product="10">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1734447278629-8ea3785ad957?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fFNtYXJ0JTIwR2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D"
+              alt="Smart Glasses"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Smart Glasses</h2>
+            <div class="product-card-price">$349.99</div>
+            <button class="view-details-btn" data-product="11">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Gaming Controller"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Gaming Controller</h2>
+            <div class="product-card-price">$59.99</div>
+            <button class="view-details-btn" data-product="12">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Coffee Maker"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Coffee Maker</h2>
+            <div class="product-card-price">$149.99</div>
+            <button class="view-details-btn" data-product="13">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Designer Sneakers"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Designer Sneakers</h2>
+            <div class="product-card-price">$179.99</div>
+            <button class="view-details-btn" data-product="14">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1507764923504-cd90bf7da772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Leather Wallet"
+              class="product-image-thumbnail"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-card-title">Leather Wallet</h2>
+            <div class="product-card-price">$49.99</div>
+            <button class="view-details-btn" data-product="15">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Modal 1: Premium Headphones -->
+        <div class="modal-overlay" id="modal-1">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Premium Headphones</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Premium Headphones"
+                    class="product-image"
+                    data-product-id="1"
+                />
+                <div class="magnifier" id="magnifier-1"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+
+                <div class="product-details">
+                <h3 class="product-title">Premium Headphones</h3>
+                <p class="product-description">
+                    Experience crystal-clear audio with our premium noise-cancelling
+                    headphones. Perfect for music lovers and professionals alike.
+                </p>
+
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>Active noise cancellation</li>
+                    <li>Bluetooth 5.0 connectivity</li>
+                    <li>40-hour battery life</li>
+                    <li>Premium memory foam ear cushions</li>
+                    <li>Built-in microphone for calls</li>
+                </ul>
+
+                <div class="product-price">$299.99</div>
+
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 2: Polaroid Camera -->
+        <div class="modal-overlay" id="modal-2">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Polaroid Camera</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img
+                    src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Polaroid Camera"
+                    class="product-image"
+                    data-product-id="2"
+                />
+                <div class="magnifier" id="magnifier-2"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+
+                <div class="product-details">
+                <h3 class="product-title">Polaroid Camera</h3>
+                <p class="product-description">
+                    Capture memories instantly with our retro-style Polaroid camera.
+                    Get physical photos in seconds and enjoy the classic photography
+                    experience.
+                </p>
+
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>Instant photo printing</li>
+                    <li>Vintage-inspired design</li>
+                    <li>Built-in flash</li>
+                    <li>Battery indicator</li>
+                    <li>Compatible with standard polaroid film</li>
+                </ul>
+
+                <div class="product-price">$149.99</div>
+
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 3: Running Shoes -->
+        <div class="modal-overlay" id="modal-3">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Running Shoes</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Running Shoes"
+                    class="product-image"
+                    data-product-id="3"
+                />
+                <div class="magnifier" id="magnifier-3"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+
+                <div class="product-details">
+                <h3 class="product-title">Running Shoes</h3>
+                <p class="product-description">
+                    Lightweight and comfortable running shoes designed for maximum
+                    performance. Perfect for professional runners and fitness
+                    enthusiasts.
+                </p>
+
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>Breathable mesh upper</li>
+                    <li>Responsive cushioning</li>
+                    <li>Durable rubber outsole</li>
+                    <li>Reflective details for visibility</li>
+                    <li>Available in multiple sizes</li>
+                </ul>
+
+                <div class="product-price">$89.99</div>
+
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 4: Smart Watch -->
+        <div class="modal-overlay" id="modal-4">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Smart Watch</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1461141346587-763ab02bced9?q=80&w=1100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Smart Watch" class="product-image" data-product-id="4" />
+                <div class="magnifier" id="magnifier-4"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+                <div class="product-details">
+                <h3 class="product-title">Smart Watch</h3>
+                <p class="product-description">Track your health and stay connected with this stylish and powerful smartwatch.</p>
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>Heart rate monitoring</li>
+                    <li>GPS tracking</li>
+                    <li>Water resistant</li>
+                    <li>Sleep tracking</li>
+                    <li>Custom watch faces</li>
+                </ul>
+                <div class="product-price">$249.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 5: Vintage Typewriter -->
+        <div class="modal-overlay" id="modal-5">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Vintage Typewriter</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Vintage Typewriter" class="product-image" data-product-id="5" />
+                <div class="magnifier" id="magnifier-5"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+                <div class="product-details">
+                <h3 class="product-title">Vintage Typewriter</h3>
+                <p class="product-description">A classic mechanical typewriter for the nostalgic writer in you.</p>
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>Fully mechanical operation</li>
+                    <li>Ribbon ink system</li>
+                    <li>Classic key sounds</li>
+                    <li>Retro design</li>
+                    <li>Sturdy build</li>
+                </ul>
+                <div class="product-price">$199.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 6: Laptop Computer -->
+        <div class="modal-overlay" id="modal-6">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Laptop Computer</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Laptop Computer" class="product-image" data-product-id="6" />
+                <div class="magnifier" id="magnifier-6"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+                <div class="product-details">
+                <h3 class="product-title">Laptop Computer</h3>
+                <p class="product-description">A powerful and portable laptop for work and entertainment on the go.</p>
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>Intel Core i7 processor</li>
+                    <li>16GB RAM, 512GB SSD</li>
+                    <li>Backlit keyboard</li>
+                    <li>High-resolution display</li>
+                    <li>Long battery life</li>
+                </ul>
+                <div class="product-price">$1299.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 7: Basketball Shoes -->
+        <div class="modal-overlay" id="modal-7">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Basketball Shoes</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Basketball Shoes" class="product-image" data-product-id="7" />
+                <div class="magnifier" id="magnifier-7"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+                <div class="product-details">
+                <h3 class="product-title">Basketball Shoes</h3>
+                <p class="product-description">High-performance shoes designed to help you dominate the court.</p>
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>High ankle support</li>
+                    <li>Durable outsole grip</li>
+                    <li>Lightweight build</li>
+                    <li>Shock absorption</li>
+                    <li>Cool colorways</li>
+                </ul>
+                <div class="product-price">$119.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 8: Digital Camera -->
+        <div class="modal-overlay" id="modal-8">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Digital Camera</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Digital Camera" class="product-image" data-product-id="8" />
+                <div class="magnifier" id="magnifier-8"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+                <div class="product-details">
+                <h3 class="product-title">Digital Camera</h3>
+                <p class="product-description">Capture stunning photos and videos with ease and clarity.</p>
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>24MP sensor</li>
+                    <li>4K video recording</li>
+                    <li>WiFi connectivity</li>
+                    <li>Touchscreen LCD</li>
+                    <li>Interchangeable lenses</li>
+                </ul>
+                <div class="product-price">$699.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 9: Mechanical Keyboard -->
+        <div class="modal-overlay" id="modal-9">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Mechanical Keyboard</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Mechanical Keyboard" class="product-image" data-product-id="9" />
+                <div class="magnifier" id="magnifier-9"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+                <div class="product-details">
+                <h3 class="product-title">Mechanical Keyboard</h3>
+                <p class="product-description">Elevate your typing and gaming with precision-engineered mechanical keys.</p>
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>RGB backlighting</li>
+                    <li>Custom keycaps</li>
+                    <li>Programmable macros</li>
+                    <li>Aluminum frame</li>
+                    <li>USB-C connectivity</li>
+                </ul>
+                <div class="product-price">$129.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 10: Bluetooth Speaker -->
+        <div class="modal-overlay" id="modal-10">
+        <div class="modal">
+            <div class="modal-header">
+            <h2 class="modal-title">Bluetooth Speaker</h2>
+            <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+            <div class="product-container">
+                <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1558537348-c0f8e733989d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fEJsdWV0b290aCUyMFNwZWFrZXJ8ZW58MHx8MHx8fDA%3D"
+                    alt="Bluetooth Speaker" class="product-image" data-product-id="10" />
+                <div class="magnifier" id="magnifier-10"></div>
+                <div class="image-hint">Hover over image to zoom</div>
+                </div>
+                <div class="product-details">
+                <h3 class="product-title">Bluetooth Speaker</h3>
+                <p class="product-description">Enjoy rich sound on the go with our portable Bluetooth speaker.</p>
+                <h4 class="features-title">Features:</h4>
+                <ul class="features-list">
+                    <li>Wireless streaming</li>
+                    <li>10-hour battery life</li>
+                    <li>Water resistant</li>
+                    <li>Built-in microphone</li>
+                    <li>USB charging</li>
+                </ul>
+                <div class="product-price">$79.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal-overlay" id="modal-11">
+                        <div class="modal">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Smart Glasses</h2>
+                            <button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-content">
+                            <div class="product-container">
+                            <div class="image-container">
+                                <img
+                                src="https://plus.unsplash.com/premium_photo-1734447278629-8ea3785ad957?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fFNtYXJ0JTIwR2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D"
+                                alt="Smart Glasses"
+                                class="product-image"
+                                data-product-id="11"
+                                />
+                                <div class="magnifier" id="magnifier-11"></div>
+                                <div class="image-hint">Hover over image to zoom</div>
+                            </div>
+                            <div class="product-details">
+                                <h3 class="product-title">Smart Glasses</h3>
+                                <p class="product-description">
+                                Futuristic eyewear that keeps you connected and
+                                enhances your view with augmented reality.
+                                </p>
+                                <h4 class="features-title">Features:</h4>
+                                <ul class="features-list">
+                                <li>Voice assistant integration</li>
+                                <li>Touch-sensitive frame</li>
+                                <li>UV protection lenses</li>
+                                <li>Open-ear audio</li>
+                                <li>Bluetooth connectivity</li>
+                                </ul>
+                                <div class="product-price">$349.99</div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 12: Gaming Controller -->
+                    <div class="modal-overlay" id="modal-12">
+                        <div class="modal">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Gaming Controller</h2>
+                            <button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-content">
+                            <div class="product-container">
+                            <div class="image-container">
+                                <img
+                                src="https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                alt="Gaming Controller"
+                                class="product-image"
+                                data-product-id="12"
+                                />
+                                <div class="magnifier" id="magnifier-12"></div>
+                                <div class="image-hint">Hover over image to zoom</div>
+                            </div>
+                            <div class="product-details">
+                                <h3 class="product-title">Gaming Controller</h3>
+                                <p class="product-description">
+                                Dominate your favorite games with our high-performance
+                                wireless gaming controller.
+                                </p>
+                                <h4 class="features-title">Features:</h4>
+                                <ul class="features-list">
+                                <li>Wireless connectivity</li>
+                                <li>Ergonomic grip</li>
+                                <li>Long battery life</li>
+                                <li>Customizable buttons</li>
+                                <li>Compatible with multiple platforms</li>
+                                </ul>
+                                <div class="product-price">$59.99</div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 13: Coffee Maker -->
+                    <div class="modal-overlay" id="modal-13">
+                        <div class="modal">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Coffee Maker</h2>
+                            <button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-content">
+                            <div class="product-container">
+                            <div class="image-container">
+                                <img
+                                src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                alt="Coffee Maker"
+                                class="product-image"
+                                data-product-id="13"
+                                />
+                                <div class="magnifier" id="magnifier-13"></div>
+                                <div class="image-hint">Hover over image to zoom</div>
+                            </div>
+                            <div class="product-details">
+                                <h3 class="product-title">Coffee Maker</h3>
+                                <p class="product-description">
+                                Start your day with the perfect cup brewed by our
+                                modern and efficient coffee maker.
+                                </p>
+                                <h4 class="features-title">Features:</h4>
+                                <ul class="features-list">
+                                <li>Programmable timer</li>
+                                <li>Thermal carafe</li>
+                                <li>Auto shut-off</li>
+                                <li>Removable filter basket</li>
+                                <li>Compact design</li>
+                                </ul>
+                                <div class="product-price">$149.99</div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 14: Designer Sneakers -->
+                    <div class="modal-overlay" id="modal-14">
+                        <div class="modal">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Designer Sneakers</h2>
+                            <button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-content">
+                            <div class="product-container">
+                            <div class="image-container">
+                                <img
+                                src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                alt="Designer Sneakers"
+                                class="product-image"
+                                data-product-id="14"
+                                />
+                                <div class="magnifier" id="magnifier-14"></div>
+                                <div class="image-hint">Hover over image to zoom</div>
+                            </div>
+                            <div class="product-details">
+                                <h3 class="product-title">Designer Sneakers</h3>
+                                <p class="product-description">
+                                Make a bold statement with our premium designer
+                                sneakers that combine style and comfort.
+                                </p>
+                                <h4 class="features-title">Features:</h4>
+                                <ul class="features-list">
+                                <li>Limited edition design</li>
+                                <li>Premium materials</li>
+                                <li>Memory foam insoles</li>
+                                <li>Breathable mesh</li>
+                                <li>Hand-finished details</li>
+                                </ul>
+                                <div class="product-price">$179.99</div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 15: Leather Wallet -->
+                    <div class="modal-overlay" id="modal-15">
+                        <div class="modal">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Leather Wallet</h2>
+                            <button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-content">
+                            <div class="product-container">
+                            <div class="image-container">
+                                <img
+                                src="https://images.unsplash.com/photo-1507764923504-cd90bf7da772?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                alt="Leather Wallet"
+                                class="product-image"
+                                data-product-id="15"
+                                />
+                                <div class="magnifier" id="magnifier-15"></div>
+                                <div class="image-hint">Hover over image to zoom</div>
+                            </div>
+                            <div class="product-details">
+                                <h3 class="product-title">Leather Wallet</h3>
+                                <p class="product-description">
+                                Elegant and durable leather wallet with ample space
+                                for your essentials.
+                                </p>
+                                <h4 class="features-title">Features:</h4>
+                                <ul class="features-list">
+                                <li>Genuine leather</li>
+                                <li>Multiple card slots</li>
+                                <li>ID window</li>
+                                <li>Secure coin pouch</li>
+                                <li>Minimalist design</li>
+                                </ul>
+                                <div class="product-price">$49.99</div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+    <script src="{% static 'js/modal.js' %}"></script>
+
+  </body>
+</html>
